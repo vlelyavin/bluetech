@@ -5,11 +5,13 @@ import { useInView } from "react-intersection-observer";
 import { forwardRef } from "react";
 import classNames from "classnames";
 import "./Services.css";
+import SmoothScrollbar from "smooth-scrollbar";
 
 export const Services = forwardRef((props, ref) => {
   const observer = useInView(observerOptions);
+  const { servicesRef, appRef, contactRef } = ref;
   return (
-    <section className="services" ref={ref}>
+    <section className="services" ref={servicesRef}>
       <Container>
         <div className="services__title__section">
           <div
@@ -28,6 +30,7 @@ export const Services = forwardRef((props, ref) => {
               <img
                 src={servicesBg}
                 className={classNames("services__row__image", { servicesRowImageAnim: observer.inView })}
+                alt="serviceBg"
               />
             </div>
             <div className="services__row__info">
@@ -391,7 +394,10 @@ export const Services = forwardRef((props, ref) => {
             </div>
           </div>
         </Container>
-        <div className="services__button__container">
+        <div
+          className="services__button__container"
+          onClick={() => SmoothScrollbar.get(appRef.current).scrollTo(0, contactRef.current.offsetTop - 150, 700)}
+        >
           <div className="services__button buttonHover">Contact us</div>
         </div>
       </div>

@@ -36,7 +36,7 @@
 .services__row__image__container {
   max-width: calc(50% - 50px);
   width: 100%;
-  min-width: 400px;
+  min-width: 300px;
   flex-shrink: 0;
 }
 
@@ -186,4 +186,124 @@
   box-shadow: 0 0 0 3px white;
   color: white;
   transform: translateX(-210px);
+}
+
+@media screen and (max-width: 1420px) {
+  .services__heading {
+    font-size: 80px;
+    line-height: 90px;
+  }
+  .services__title__section {
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .services__heading {
+    font-size: 60px;
+    line-height: 70px;
+  }
+  .services__row__inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .services__row__info__text {
+    width: 100%;
+  }
+  .services__row {
+    margin-top: 30px;
+  }
+  .services__row__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .services__button__container {
+    padding-bottom: 50px;
+  }
+  .services__button {
+    transform: none;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .services__heading {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .services__heading br {
+    display: none;
+  }
+  .services__row__info__text {
+    width: 60%;
+    font-size: 14px;
+  }
+  .services__row__blob:nth-child(1) .services__row__blob__figure {
+    width: 300px;
+    height: 300px;
+  }
+
+  .services__row__blob:nth-child(1) {
+    width: 150px;
+    height: 150px;
+    color: white;
+    top: 0;
+    left: 30px;
+    animation: blob 2s forwards infinite;
+    transform-origin: 50% 50%;
+  }
+
+  .services__row__blob:nth-child(2) .services__row__blob__figure {
+    width: 270px;
+    height: 270px;
+  }
+
+  .services__row__blob:nth-child(2) {
+    width: 150px;
+    height: 150px;
+    color: white;
+    top: 100px;
+    right: 30px;
+  }
+
+  .services__row__blob:nth-child(3) .services__row__blob__figure {
+    width: 280px;
+    height: 280px;
+  }
+
+  .services__row__blob:nth-child(3) {
+    width: 150px;
+    height: 150px;
+    color: white;
+    top: 250px;
+    left: 60px;
+    color: var(--darkblue);
+  }
+
+  .services__row__blob__additional__first {
+    position: absolute;
+    right: 30px;
+    top: -20px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .services__row__blob__additional__second {
+    position: absolute;
+    top: 180px;
+    left: 15px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .services__row__blob__additional__third {
+    position: absolute;
+    bottom: -20px;
+    right: 30px;
+    width: 90px;
+    height: 90px;
+  }
 }

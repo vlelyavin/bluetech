@@ -25,7 +25,6 @@
   display: flex;
   align-items: center;
   gap: 60px;
-  margin-top: 40px;
 }
 
 .intro__banner__column.link:hover .intro__banner__link__icon {
@@ -331,4 +330,126 @@
   width: 0;
   background: var(--green);
   transition: 0.2s;
+}
+
+.intro__banner__column .intro__banner__column.link {
+  display: none;
+}
+
+@media screen and (max-width: 1420px) {
+  .intro__banner__title {
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-end;
+    font-size: 100px;
+  }
+  .intro__banner__word:nth-child(1) {
+    align-self: flex-start;
+  }
+  .intro__banner__title.upper {
+    position: relative;
+  }
+  .puzzle {
+    position: absolute;
+    top: 300px;
+    width: 150px;
+    height: 150px;
+  }
+  .puzzle__parent {
+    width: 140px;
+    height: 140px;
+  }
+  .puzzle__child {
+    display: none;
+  }
+  .intro__banner__title.lower .intro__banner__word:nth-child(1) {
+    align-self: center;
+  }
+  .intro__banner__title.lower .intro__banner__word:nth-child(2) {
+    align-self: flex-start;
+  }
+  .intro__banner__row {
+    flex-direction: column;
+    position: relative;
+  }
+
+  .intro__banner__column.link {
+    order: 3;
+  }
+  .intro__banner__column__text {
+    align-items: flex-start;
+  }
+  .intro__banner__column__text__block:nth-child(1) {
+    width: 50%;
+    text-align: left;
+  }
+
+  .intro__banner__column__text__block:nth-child(2) {
+    width: 50%;
+    text-align: right;
+    align-self: flex-end;
+  }
+  .intro__banner__column__text__block:nth-child(3) {
+    width: 50%;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .intro__banner__title {
+    font-size: 55px;
+  }
+  .intro__banner__column__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .intro__banner__row {
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .intro__banner__column__text__block:nth-child(1) {
+    width: 70%;
+  }
+
+  .intro__banner__column__text__block:nth-child(2) {
+    width: 70%;
+  }
+  .intro__banner__column__text__block:nth-child(3) {
+    width: 70%;
+  }
+  .puzzle {
+    position: absolute;
+    top: 150px;
+    width: 100px;
+    height: 100px;
+  }
+  .puzzle__parent {
+    width: 90px;
+    height: 90px;
+  }
+  .intro__banner__column__row__item {
+    width: auto;
+    height: 150px;
+  }
+  .intro__banner__column__row__item__number {
+    font-size: 42px;
+  }
+  .intro__banner__link__icon__container {
+    width: 110px;
+    height: 110px;
+  }
+  .intro__banner {
+    padding-bottom: 20px;
+  }
+  .intro__banner__row .intro__banner__column.link {
+    display: none;
+  }
+  .intro__banner__column .intro__banner__column.link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

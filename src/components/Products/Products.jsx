@@ -7,11 +7,13 @@ import { observerOptions } from "../../constants/constants";
 import classNames from "classnames";
 import "./Products.css";
 import { forwardRef } from "react";
+import SmoothScrollbar from "smooth-scrollbar";
 
 export const Products = forwardRef((props, ref) => {
   const observer = useInView(observerOptions);
+  const { contactRef, appRef, productsRef } = ref;
   return (
-    <section className="products" ref={ref}>
+    <section className="products" ref={productsRef}>
       <Container>
         <div className="products__title__section">
           <div
@@ -25,7 +27,7 @@ export const Products = forwardRef((props, ref) => {
               headingAnimInverted: observer.inView,
             })}
           >
-            Implementing <span className="mediumItalic">Digital</span>
+            Implementing <span className="mediumItalic">Digital </span>
             <br />
             <span className="mediumItalic">Products</span> With Technology
           </div>
@@ -89,7 +91,10 @@ export const Products = forwardRef((props, ref) => {
             </div>
           </div>
         </Container>
-        <div className="products__button__container">
+        <div
+          className="products__button__container"
+          onClick={() => SmoothScrollbar.get(appRef.current).scrollTo(0, contactRef.current.offsetTop - 150, 700)}
+        >
           <div className="products__button buttonHover">Contact us</div>
         </div>
       </div>

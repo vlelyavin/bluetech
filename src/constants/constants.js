@@ -1,4 +1,4 @@
 export const observerOptions = {
-  threshold: 0.7,
+  threshold: 0.5,
   triggerOnce: true,
 };

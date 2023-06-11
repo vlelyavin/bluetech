@@ -104,3 +104,56 @@
 .footerLinkHoverUnderline:hover::after {
   width: 100%;
 }
+
+@media screen and (max-width: 1420px) {
+  .footer__title {
+    font-size: 80px;
+    line-height: 90px;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .footer__bg {
+    background: url(../../assets/footerMobileBg.png) no-repeat center center / cover;
+    background-position: top;
+  }
+  .footer__title {
+    font-size: 60px;
+    line-height: 70px;
+    padding-right: unset;
+  }
+  .footer__row {
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .footer__column:nth-child(2) {
+    align-self: flex-end;
+    text-align: right;
+  }
+  .footer__column:nth-child(2) .footer__column__line {
+    justify-content: flex-end;
+  }
+  .footer__lower__inner {
+    flex-direction: column;
+  }
+  .footer__nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer__rights {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .footer__bg {
+    top: 25px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer__title {
+    font-size: 45px;
+    line-height: 50px;
+  }
+}

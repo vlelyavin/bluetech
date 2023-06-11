@@ -4,11 +4,13 @@ import { observerOptions } from "../../constants/constants";
 import classNames from "classnames";
 import { forwardRef } from "react";
 import "./Areas.css";
+import SmoothScrollbar from "smooth-scrollbar";
 
 export const Areas = forwardRef((props, ref) => {
   const observer = useInView(observerOptions);
+  const { areasRef, contactRef, appRef } = ref;
   return (
-    <section className="areas" ref={ref}>
+    <section className="areas" ref={areasRef}>
       <Container>
         <div className="areas__inner">
           <div className="areas__info">
@@ -52,7 +54,10 @@ export const Areas = forwardRef((props, ref) => {
             <div className="areas__info__text">
               Here is a brief description of the areas in which we work and help our clients achieve their goals
             </div>
-            <div className="areas__info__button__container">
+            <div
+              className="areas__info__button__container"
+              onClick={() => SmoothScrollbar.get(appRef.current).scrollTo(0, contactRef.current.offsetTop, 700)}
+            >
               <div className="areas__info__button buttonHover">Contact us</div>
             </div>
           </div>
@@ -165,6 +170,12 @@ export const Areas = forwardRef((props, ref) => {
               <div className="areas__grid__item__title">Paid advertising</div>
               <div className="areas__grid__item__text">Promotion on thematic platforms</div>
             </div>
+          </div>
+          <div
+            className="areas__info__button__container mobile"
+            onClick={() => SmoothScrollbar.get(appRef.current).scrollTo(0, contactRef.current.offsetTop, 700)}
+          >
+            <div className="areas__info__button buttonHover">Contact us</div>
           </div>
         </div>
       </Container>

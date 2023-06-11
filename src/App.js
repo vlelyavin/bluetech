@@ -45,14 +45,14 @@ export const App = () => {
     <>
       <Header ref={{ appRef, introRef, productsRef, areasRef, servicesRef, contactRef }} />
       <div ref={appRef} className="app">
-        <IntroBanner />
+        <IntroBanner ref={{ contactRef, appRef }} />
 
-        <Intro ref={introRef} />
+        <Intro ref={{ introRef, contactRef, appRef }} />
 
-        <Products ref={productsRef} />
+        <Products ref={{ productsRef, contactRef, appRef }} />
 
-        <Services ref={servicesRef} />
-        <Areas ref={areasRef} />
+        <Services ref={{ servicesRef, appRef, contactRef }} />
+        <Areas ref={{ areasRef, appRef, contactRef }} />
 
         <Footer ref={contactRef} />
       </div>

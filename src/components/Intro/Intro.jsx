@@ -4,15 +4,16 @@ import { useInView } from "react-intersection-observer";
 import classNames from "classnames";
 import "./Intro.css";
 import { forwardRef } from "react";
+import SmoothScrollbar from "smooth-scrollbar";
 
 export const Intro = forwardRef((props, ref) => {
   const observer = useInView(observerOptions);
-
+  const { contactRef, introRef, appRef } = ref;
   return (
     <div className="intro" ref={observer.ref}>
       <Container>
         <div className="intro__title__section">
-          <div className={classNames("intro__heading", { headingAnim: observer.inView })} ref={ref}>
+          <div className={classNames("intro__heading", { headingAnim: observer.inView })} ref={introRef}>
             Let's Introduce
             <br />
             <span className="mediumItalic">Ourselves</span>
@@ -82,6 +83,7 @@ export const Intro = forwardRef((props, ref) => {
               className={classNames("intro__row__button", {
                 introRowButtonAnim: observer.inView,
               })}
+              onClick={() => SmoothScrollbar.get(appRef.current).scrollTo(0, contactRef.current.offsetTop - 150, 700)}
             >
               Contact us
             </div>

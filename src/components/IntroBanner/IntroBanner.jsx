@@ -1,14 +1,16 @@
 import { useInView } from "react-intersection-observer";
 import { Container } from "../Container";
-import "./IntroBanner.css";
 import classNames from "classnames";
 import { forwardRef } from "react";
+import SmoothScrollbar from "smooth-scrollbar";
+import "./IntroBanner.css";
 
 export const IntroBanner = forwardRef((props, ref) => {
   const observer = useInView({ threshold: 1 });
+  const { appRef, contactRef } = ref;
 
   return (
-    <section className="intro__banner" ref={ref}>
+    <section className="intro__banner">
       <Container>
         <div className="intro__banner__title upper">
           <div className="intro__banner__word">Fresh</div>
@@ -59,7 +61,10 @@ export const IntroBanner = forwardRef((props, ref) => {
           <div className="intro__banner__word lightItalic">Times</div>
         </div>
         <div className="intro__banner__row">
-          <div className="intro__banner__column link">
+          <div
+            className="intro__banner__column link"
+            onClick={() => SmoothScrollbar.get(appRef.current).scrollTo(0, contactRef.current.offsetTop, 700)}
+          >
             <div className="intro__banner__link__icon__container">
               <svg
                 width="37"
@@ -75,7 +80,6 @@ export const IntroBanner = forwardRef((props, ref) => {
                 />
               </svg>
             </div>
-
             <div className="intro__banner__link__title buttonTextUnderline">Contact us</div>
           </div>
           <div className="intro__banner__column">
@@ -112,6 +116,27 @@ export const IntroBanner = forwardRef((props, ref) => {
               <div className="intro__banner__column__row__item">
                 <div className="intro__banner__column__row__item__number">15+</div>
                 <div className="intro__banner__column__row__item__text">Specialists</div>
+              </div>
+              <div
+                className="intro__banner__column link"
+                onClick={() => SmoothScrollbar.get(appRef.current).scrollTo(0, contactRef.current.offsetTop, 700)}
+              >
+                <div className="intro__banner__link__icon__container">
+                  <svg
+                    width="37"
+                    height="37"
+                    viewBox="0 0 37 37"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="intro__banner__link__icon"
+                  >
+                    <path
+                      d="M30.3443 10.8504L4.88317 36.3115L0.699463 32.1279L26.1606 6.66667H3.71939V0.75H36.261V33.2917H30.3443V10.8504Z"
+                      fill="#78E37E"
+                    />
+                  </svg>
+                </div>
+                <div className="intro__banner__link__title buttonTextUnderline">Contact us</div>
               </div>
             </div>
           </div>
