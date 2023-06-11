@@ -10,7 +10,7 @@ export const Intro = forwardRef((props, ref) => {
   const observer = useInView(observerOptions);
   const { contactRef, introRef, appRef } = ref;
   return (
-    <div className="intro" ref={observer.ref}>
+    <section className="intro" ref={observer.ref}>
       <Container>
         <div className="intro__title__section">
           <div className={classNames("intro__heading", { headingAnim: observer.inView })} ref={introRef}>
@@ -90,6 +90,6 @@ export const Intro = forwardRef((props, ref) => {
           </div>
         </div>
       </Container>
-    </div>
+    </section>
   );
 });
