@@ -219,7 +219,7 @@
     font-size: 16px;
   }
   .intro__row {
-    gap: 0;
+    gap: 20px;
   }
   .intro__row__item {
     padding: 30px 25px;
