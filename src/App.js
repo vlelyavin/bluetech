@@ -24,6 +24,9 @@ export const App = () => {
     alwaysShowTracks: false,
     continuousScrolling: true,
     overscrollEffect: true,
+    plugins: {
+      disableOverflowX: true,
+    },
   };
 
   useEffect(() => {
