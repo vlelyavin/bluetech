@@ -1,0 +1,334 @@
+.intro__banner {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+  background: var(--blue);
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  color: white;
+  padding-bottom: 80px;
+  padding-top: 130px;
+}
+
+.intro__banner__title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 120px;
+}
+
+.intro__banner__row {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.intro__banner__column.link:hover .intro__banner__link__icon {
+  right: -5px;
+}
+
+.intro__banner__column.link:hover .buttonTextUnderline::after {
+  width: 100%;
+}
+
+.intro__banner__link__icon__container {
+  position: relative;
+  right: 0;
+  transition: 0.3s !important;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 6px var(--green);
+  opacity: 0;
+  border-radius: 50%;
+  transform: translateX(-40px);
+  animation: introBannerLinkAnim 0.5s 0.75s forwards;
+}
+
+.intro__banner__link__icon__container:hover .intro__banner__link__icon {
+  transform: rotate(135deg) scale(1.05);
+}
+
+.intro__banner__column.link:hover .intro__banner__link__title {
+  top: 7px;
+}
+
+.intro__banner__link__icon {
+  width: 30px;
+  height: 30px;
+  transition: 0.3s;
+}
+
+.intro__banner__link__title {
+  position: relative;
+  top: 0;
+  animation: introBannerLinkAnim 0.5s 0.9s forwards;
+  opacity: 0;
+  transition: 0.3s;
+  transform: translateX(-40px);
+}
+
+@keyframes introBannerLinkAnim {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.intro__banner__column__text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.intro__banner__column__text__block {
+  overflow: hidden;
+}
+
+.intro__banner__column__text__block:nth-child(1) p {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: introBannerTextBlockAnim 0.5s 0.75s forwards;
+}
+
+.intro__banner__column__text__block:nth-child(2) p {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: introBannerTextBlockAnim 0.5s 0.9s forwards;
+}
+
+.intro__banner__column__text__block:nth-child(3) p {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: introBannerTextBlockAnim 0.5s 1.05s forwards;
+}
+
+@keyframes introBannerTextBlockAnim {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.intro__banner__link__title {
+  color: var(--green);
+  text-align: center;
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+.intro__banner__row,
+.intro__banner__column__row {
+  display: flex;
+  align-items: center;
+}
+
+.intro__banner__column__row {
+  gap: 20px;
+}
+
+.intro__banner__column__row__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0px 4px 36px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  width: 230px;
+  height: 200px;
+  padding: 30px;
+  gap: 5px;
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+@keyframes introBannerColumnRowItemAnim {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.intro__banner__column__row__item:nth-child(1) {
+  background: var(--lightpurple);
+  animation: introBannerColumnRowItemAnim 0.5s 0.75s forwards;
+}
+
+.intro__banner__column__row__item:nth-child(2) {
+  background: var(--yellow);
+  color: var(--darkblue);
+  animation: introBannerColumnRowItemAnim 0.5s 0.9s forwards;
+}
+
+.intro__banner__column__row__item:nth-child(3) {
+  background: var(--red);
+  animation: introBannerColumnRowItemAnim 0.5s 1.05s forwards;
+}
+
+.intro__banner__column__row__item__number {
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.intro__banner__column__row__item__text {
+  font-size: 18px;
+}
+
+.intro__banner__column__text {
+  font-size: 0.9rem;
+}
+
+@keyframes introBannerWordAnim {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.intro__banner__title.upper .intro__banner__word:nth-child(1) {
+  opacity: 0;
+  transform: translateY(60px);
+  animation: introBannerWordAnim 0.5s forwards;
+}
+
+.intro__banner__title.upper .intro__banner__word:nth-child(3) {
+  opacity: 0;
+  transform: translateY(60px);
+  animation: introBannerWordAnim 0.5s 0.15s forwards;
+}
+
+.intro__banner__title.lower .intro__banner__word:nth-child(1) {
+  opacity: 0;
+  transform: translateY(60px);
+  animation: introBannerWordAnim 0.5s 0.3s forwards;
+}
+
+.intro__banner__title.lower .intro__banner__word:nth-child(2) {
+  opacity: 0;
+  transform: translateY(60px);
+  animation: introBannerWordAnim 0.5s 0.45s forwards;
+}
+
+.intro__banner__title.lower .intro__banner__word:nth-child(3) {
+  opacity: 0;
+  transform: translateY(60px);
+  animation: introBannerWordAnim 0.5s 0.6s forwards;
+}
+.puzzle {
+  width: 250px;
+  height: 250px;
+}
+
+.puzzle__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.puzzle__parent {
+  width: 230px;
+  height: 230px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: var(--blue);
+  transition: 0.3s;
+}
+
+.puzzleParentAnim {
+  transform: translate(-50%, -50%) rotate(0);
+}
+
+.puzzleParentAnimBackwards {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.puzzle__child {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  opacity: 0;
+  background: url(../../assets/puzzle.png) no-repeat center center / contain;
+  transition: 0.3s;
+}
+
+.puzzleFirstChildAnim {
+  position: absolute;
+  top: -200px;
+  left: -100px;
+  transform: translate(0, 0) rotate(0);
+  opacity: 1;
+}
+
+.puzzleFirstChildAnimBackwards {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  opacity: 0;
+}
+
+.puzzleSecondChildAnim {
+  top: -258px;
+  left: 60px;
+  transform: translate(0, 0) rotate(0);
+  opacity: 1;
+}
+
+.puzzleSecondChildAnimBackwards {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-135deg);
+  opacity: 0;
+}
+
+.puzzleThirdChildAnim {
+  right: -120px;
+  top: -170px;
+  transform: translate(0, 0) rotate(0);
+  opacity: 1;
+}
+
+.puzzleThirdChildAnimBackwards {
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%) rotate(-180deg);
+  opacity: 0;
+}
+
+.buttonTextUnderline {
+  position: relative;
+}
+
+.buttonTextUnderline::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background: var(--green);
+  transition: 0.2s;
+}

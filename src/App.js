@@ -1,25 +1,61 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useRef } from "react";
+import "./assets/style/main.css";
+import { Areas } from "./components/Areas";
+import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
+import { Intro } from "./components/Intro";
+import { IntroBanner } from "./components/IntroBanner";
+import { Products } from "./components/Products";
+import { Services } from "./components/Services";
+import SmoothScrollbar from "smooth-scrollbar";
 
-function App() {
+export const App = () => {
+  const introRef = useRef();
+  const productsRef = useRef();
+  const areasRef = useRef();
+  const contactRef = useRef();
+  const servicesRef = useRef();
+
+  const appRef = useRef();
+  const options = {
+    damping: 0.03,
+    thumbMinSize: 20,
+    renderByPixels: true,
+    alwaysShowTracks: false,
+    continuousScrolling: true,
+    overscrollEffect: true,
+  };
+
+  useEffect(() => {
+    SmoothScrollbar.init(appRef.current, options);
+    // window.addEventListener("resize", () => {
+    //   if (window.innerWidth > 800) {
+    //     SmoothScrollbar.init(appRef.current, options);
+    //   } else {
+    //     SmoothScrollbar.destroy(appRef.current, options);
+    //   }
+    // });
+    // if (window.innerWidth > 800) {
+    //   SmoothScrollbar.init(appRef.current, options);
+    // } else {
+    //   SmoothScrollbar.destroy(appRef.current, options);
+    // }
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <>
+      <Header ref={{ appRef, introRef, productsRef, areasRef, servicesRef, contactRef }} />
+      <div ref={appRef} className="app">
+        <IntroBanner />
 
-export default App;
+        <Intro ref={introRef} />
+
+        <Products ref={productsRef} />
+
+        <Services ref={servicesRef} />
+        <Areas ref={areasRef} />
+
+        <Footer ref={contactRef} />
+      </div>
+    </>
+  );
+};

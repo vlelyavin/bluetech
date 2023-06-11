@@ -1,0 +1,146 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  padding-top: 110px;
+}
+
+.intro__inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.intro__title__section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.intro__heading {
+  font-size: 100px;
+  line-height: 110px;
+  transform: translateX(-100px);
+  opacity: 0;
+}
+
+.intro__subheading {
+  font-size: 35px;
+  text-align: right;
+  position: relative;
+  top: 30px;
+  transform: translateX(50px);
+  opacity: 0;
+}
+
+.intro__text__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.intro__text {
+  text-align: left;
+  width: 35%;
+  transform: translateX(60px);
+  opacity: 0;
+  transition: 0.3s;
+  transition-delay: 0.3s;
+}
+
+.introTextAnim {
+  transform: translateX(125px);
+  opacity: 1;
+}
+
+.intro__row {
+  display: flex;
+  align-items: flex-end;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.intro__row__item {
+  padding: 60px 45px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  transform: translateX(-50px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.intro__row__item:nth-child(1) {
+  transition-delay: 0.45s;
+}
+
+.intro__row__item:nth-child(2) {
+  transition-delay: 0.6s;
+}
+
+.introRowItemAnim {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.intro__row__item__icon {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-shrink: 0;
+}
+
+.intro__row__item:nth-child(1) {
+  background: var(--purple);
+}
+
+.intro__row__item:nth-child(2) {
+  background: var(--magenta-red);
+}
+
+.intro__row__item__info {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  gap: 10px;
+}
+
+.intro__row__item__info__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.intro__row__item__info__text {
+  font-size: 1.05rem;
+  font-weight: 300;
+}
+
+.intro__row__button__container {
+  width: 160px;
+  height: 280px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.intro__row__button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  border-radius: 110px;
+  background: var(--green);
+  font-size: 28px;
+  font-weight: 500;
+  transform: translateY(50%);
+  opacity: 0;
+  transition: 0.3s;
+  transition-delay: 0.45s;
+}
+
+.introRowButtonAnim {
+  transform: translateY(0);
+  opacity: 1;
+}

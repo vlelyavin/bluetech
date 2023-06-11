@@ -1,0 +1,136 @@
+.products {
+  padding-top: 120px;
+  position: relative;
+  z-index: 3;
+}
+
+.products__title__section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.products__heading {
+  text-align: right;
+  font-size: 80px;
+  line-height: 90px;
+  opacity: 0;
+}
+
+.products__subheading {
+  font-size: 35px;
+  text-align: right;
+  position: relative;
+  top: 30px;
+  opacity: 0;
+}
+
+.products__row {
+  margin-top: 150px;
+  width: 100%;
+  height: 100vh;
+  background: url(../../assets/productsBg.png) no-repeat center center / contain;
+}
+
+.products__row__inner {
+  position: relative;
+  top: -80px;
+  display: flex;
+  width: 100%;
+  gap: 30px;
+  padding: 0 40px;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.products__column {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  gap: 25px;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.productsColumnAnim {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.products__column:nth-child(1) {
+  transition-delay: 0.3s;
+}
+
+.products__column:nth-child(2) {
+  transition-delay: 0.45s;
+}
+.products__column:nth-child(3) {
+  transition-delay: 0.6s;
+}
+
+.products__column__image__container {
+  width: 415px;
+  height: 350px;
+}
+
+.products__column:nth-child(2) .products__column__image__container {
+  width: 415px;
+  height: 400px;
+}
+
+.products__column__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.products__column__info__title {
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.products__column__info__text {
+  color: white;
+  font-weight: 300;
+}
+
+.products__column__info {
+  max-width: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-height: 200px;
+}
+
+.products__column:nth-child(1) .products__column__info__title {
+  color: #ff7eb1;
+}
+
+.products__column:nth-child(2) .products__column__info__title {
+  color: var(--yellow);
+}
+
+.products__column:nth-child(3) .products__column__info__title {
+  color: var(--green);
+}
+
+.products__button__container {
+  width: 100%;
+  display: flex;
+  position: relative;
+  top: -50px;
+  justify-content: center;
+}
+
+.products__button {
+  color: white;
+  font-size: 28px;
+  font-weight: 500;
+  padding: 30px 75px;
+  box-shadow: 0 0 0 3px white;
+  border-radius: 110px;
+}
