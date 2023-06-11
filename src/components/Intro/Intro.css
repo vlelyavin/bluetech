@@ -208,6 +208,9 @@
 }
 
 @media screen and (max-width: 600px) {
+  .intro {
+    padding-top: 50px;
+  }
   .intro__heading {
     font-size: 52px;
     line-height: 60px;
@@ -216,7 +219,7 @@
     font-size: 16px;
   }
   .intro__row {
-    gap: 20px;
+    gap: 0;
   }
   .intro__row__item {
     padding: 30px 25px;
@@ -235,6 +238,8 @@
   }
   .intro__row__button {
     font-size: 18px;
+    height: 80px;
+    margin-top: 5px;
   }
   .intro__row__button__container {
     width: 160px;

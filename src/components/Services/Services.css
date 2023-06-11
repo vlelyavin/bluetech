@@ -225,7 +225,8 @@
   }
   .services__button {
     transform: none;
-    font-size: 20px;
+    font-size: 18px;
+    padding: 20px 80px;
   }
 }
 
