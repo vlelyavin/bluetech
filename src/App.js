@@ -31,18 +31,6 @@ export const App = () => {
 
   useEffect(() => {
     SmoothScrollbar.init(appRef.current, options);
-    // window.addEventListener("resize", () => {
-    //   if (window.innerWidth > 800) {
-    //     SmoothScrollbar.init(appRef.current, options);
-    //   } else {
-    //     SmoothScrollbar.destroy(appRef.current, options);
-    //   }
-    // });
-    // if (window.innerWidth > 800) {
-    //   SmoothScrollbar.init(appRef.current, options);
-    // } else {
-    //   SmoothScrollbar.destroy(appRef.current, options);
-    // }
   }, []);
   return (
     <>
