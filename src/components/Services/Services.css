@@ -242,9 +242,11 @@
   .services__heading br {
     display: none;
   }
+  .services__row__info {
+    width: 100%;
+  }
   .services__row__info__text {
     font-size: 14px;
-    padding: 0 50px;
     text-align: left;
   }
   .services__row__blob:nth-child(1) .services__row__blob__figure {
