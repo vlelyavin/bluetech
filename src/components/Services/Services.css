@@ -231,6 +231,10 @@
 }
 
 @media screen and (max-width: 600px) {
+  .services__row__image__container {
+    max-width: 100%;
+    width: 100%;
+  }
   .services__heading {
     font-size: 50px;
     line-height: 60px;
@@ -239,8 +243,9 @@
     display: none;
   }
   .services__row__info__text {
-    width: 60%;
     font-size: 14px;
+    padding: 0 50px;
+    text-align: left;
   }
   .services__row__blob:nth-child(1) .services__row__blob__figure {
     width: 300px;
