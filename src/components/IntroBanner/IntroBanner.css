@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   gap: 80px;
-  background: var(--blue);
+  background: url(../../assets/introbg.png) no-repeat top center / cover;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
   color: white;
@@ -19,6 +19,10 @@
   justify-content: space-between;
   font-weight: 500;
   font-size: 120px;
+}
+
+.lower {
+  margin-bottom: 50px;
 }
 
 .intro__banner__row {
@@ -142,6 +146,23 @@
 }
 
 .intro__banner__column__row__item {
+  transition: 0.3s;
+}
+
+.intro__banner__column__row__item:hover {
+  border-radius: 20px;
+  transform: translateX(5px);
+}
+
+.intro__banner__column__row__item:hover .intro__banner__column__row__item__number {
+  transform: translateX(5px);
+}
+
+.intro__banner__column__row__item:hover .intro__banner__column__row__item__text {
+  transform: translate(5px, -5px);
+}
+
+.intro__banner__column__row__item {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -185,10 +206,12 @@
 .intro__banner__column__row__item__number {
   font-size: 60px;
   font-weight: 600;
+  transition: 0.3s;
 }
 
 .intro__banner__column__row__item__text {
   font-size: 18px;
+  transition: 0.3s;
 }
 
 .intro__banner__column__text {
@@ -253,7 +276,6 @@
   left: 50%;
   position: absolute;
   transform: translate(-50%, -50%) rotate(45deg);
-  background: var(--blue);
   transition: 0.3s;
 }
 

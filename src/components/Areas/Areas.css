@@ -31,9 +31,9 @@
 }
 
 .areas__info__button {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 500;
-  padding: 30px 80px;
+  padding: 35px 75px;
   border-radius: 110px;
   box-shadow: 0 0 0 3px white;
   color: white;
@@ -86,23 +86,46 @@
   gap: 30px;
 }
 
+.areas__grid__item:hover {
+  border-radius: 20px;
+}
+
+.areas__grid__item:hover .areas__grid__item__title {
+  transform: translateX(3px);
+}
+
+.areas__grid__item:hover .areas__grid__item__text {
+  transform: translateX(3px);
+}
+
+.areas__grid__item:hover .areas__grid__item__icon {
+  transform: translateX(3px);
+}
+
 .areas__grid__item {
   width: 100%;
-  border-radius: 33px;
+  border-radius: 40px;
   padding: 30px;
   display: flex;
   flex-direction: column;
+  transition: 0.3s;
 }
 
 .areas__grid__item__title {
   margin: 20px 0 10px;
   font-size: 1.1rem;
   font-weight: 500;
+  transition: 0.3s;
 }
 
 .areas__grid__item__text {
   font-style: italic;
   font-weight: 300;
+  transition: 0.3s;
+}
+
+.areas__grid__item__icon {
+  transition: 0.3s;
 }
 
 .areas__info__text {
@@ -114,7 +137,7 @@
 }
 
 .areas__grid__item:nth-child(2) {
-  background: var(--purple);
+  background: #505bde;
 }
 
 .areas__grid__item:nth-child(3) {
@@ -128,7 +151,7 @@
 }
 
 .areas__grid__item:nth-child(5) {
-  background: var(--purple);
+  background: #505bde;
 }
 
 .areas__grid__item:nth-child(6) {
@@ -179,8 +202,8 @@
     margin-top: 30px;
   }
   .areas__info__button {
-    font-size: 18px;
-    padding: 20px 80px;
+    font-size: 16px;
+    padding: 23px 60px;
   }
   .areas__info .areas__info__button__container {
     display: none;

@@ -123,15 +123,15 @@
   width: 100%;
   display: flex;
   position: relative;
-  top: -50px;
+  top: -70px;
   justify-content: center;
 }
 
 .products__button {
   color: white;
-  font-size: 28px;
+  font-size: 25px;
   font-weight: 500;
-  padding: 30px 75px;
+  padding: 35px 75px;
   box-shadow: 0 0 0 3px white;
   border-radius: 110px;
 }
@@ -186,9 +186,12 @@
     width: 315px;
     height: 300px;
   }
+  .products__button__container {
+    top: -50px;
+  }
   .products__button {
-    font-size: 18px;
-    padding: 20px 80px;
+    font-size: 16px;
+    padding: 23px 60px;
   }
 }
 

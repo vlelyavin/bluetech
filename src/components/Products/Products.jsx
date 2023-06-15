@@ -5,17 +5,17 @@ import { Container } from "../Container";
 import { useInView } from "react-intersection-observer";
 import { observerOptions } from "../../constants/constants";
 import classNames from "classnames";
-import "./Products.css";
 import { forwardRef } from "react";
 import SmoothScrollbar from "smooth-scrollbar";
+import "./Products.css";
 
 export const Products = forwardRef((props, ref) => {
   const observer = useInView(observerOptions);
   const { contactRef, appRef, productsRef } = ref;
   return (
-    <section className="products" ref={observer.ref}>
+    <section className="products" ref={productsRef}>
       <Container>
-        <div className="products__title__section" ref={productsRef}>
+        <div className="products__title__section" ref={observer.ref}>
           <div className={classNames("products__subheading lightItalic", { subheadingAnimInverted: observer.inView })}>
             What We Create?
           </div>
@@ -75,9 +75,9 @@ export const Products = forwardRef((props, ref) => {
               </div>
               <div className="products__column__info">
                 <div className="products__column__info__title">
-                  Creation of
+                  Creation of&nbsp;
                   <br />
-                  marvelous mobile
+                  marvelous mobile&nbsp;
                   <br />
                   apps
                 </div>
