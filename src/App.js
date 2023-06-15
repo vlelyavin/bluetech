@@ -17,15 +17,15 @@ export const App = () => {
   const servicesRef = useRef();
 
   const appRef = useRef();
-  const options = {
-    damping: 0.03,
-    thumbMinSize: 20,
-    renderByPixels: true,
-    alwaysShowTracks: false,
-    continuousScrolling: true,
-  };
 
   useEffect(() => {
+    const options = {
+      damping: 0.04,
+      thumbMinSize: 20,
+      renderByPixels: true,
+      alwaysShowTracks: false,
+      continuousScrolling: false,
+    };
     SmoothScrollbar.init(appRef.current, options);
   }, []);
   return (
