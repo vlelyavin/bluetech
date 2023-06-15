@@ -150,6 +150,9 @@
   .footer__bg {
     top: 25px;
   }
+  .footer__lower {
+    margin-top: 0;
+  }
 }
 
 @media screen and (max-width: 600px) {

@@ -246,7 +246,7 @@
   .intro__row {
     gap: 20px;
   }
-  .intro__row__item {
+  .intro__row__item__inner {
     padding: 30px 25px;
     gap: 22px;
     border-radius: 30px;
@@ -263,8 +263,7 @@
   }
   .intro__row__button {
     font-size: 16px;
-    padding: 23px 60px;
-    margin-top: 5px;
+    white-space: nowrap;
   }
   .intro__row__button__container {
     width: 160px;
