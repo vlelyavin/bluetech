@@ -76,61 +76,25 @@ section {
 }
 
 .headingAnim {
-  animation: headingAnim 0.5s forwards;
-}
-
-@keyframes headingAnim {
-  from {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+  transform: translateX(0) !important;
+  opacity: 1 !important;
+  transition: 0.3s !important ;
 }
 
 .subheadingAnim {
-  animation: subheadingAnim 0.5s 0.15s forwards;
-}
-
-@keyframes subheadingAnim {
-  from {
-    transform: translateX(50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+  transform: translateX(0) !important;
+  opacity: 1 !important;
+  transition: 0.3s !important;
 }
 
 .headingAnimInverted {
-  animation: headingAnimInverted 0.5s forwards;
-}
-
-@keyframes headingAnimInverted {
-  from {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+  transition: 0.3s !important;
+  transform: translateX(0) !important;
+  opacity: 1 !important;
 }
 
 .subheadingAnimInverted {
-  animation: subheadingAnimInverted 0.5s 0.15s forwards;
-}
-
-@keyframes subheadingAnimInverted {
-  from {
-    transform: translateX(-50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+  transition: 0.3s !important;
+  transform: translateX(0) !important;
+  opacity: 1 !important;
 }

@@ -4,16 +4,17 @@ import classNames from "classnames";
 import { forwardRef } from "react";
 import SmoothScrollbar from "smooth-scrollbar";
 import "./IntroBanner.css";
+import { observerOptions } from "../../constants/constants";
 
 export const IntroBanner = forwardRef((props, ref) => {
-  const observer = useInView({ threshold: 1 });
+  const observer = useInView(observerOptions);
   const { appRef, contactRef } = ref;
 
   return (
-    <section className="intro__banner">
+    <section className="intro__banner" ref={observer.ref}>
       <Container>
         <div className="intro__banner__title upper">
-          <div className="intro__banner__word">Fresh</div>
+          <div className={classNames("intro__banner__word", { introBannerWordAnim: observer.inView })}>Fresh</div>
           <div className="puzzle">
             <div className="puzzle__inner">
               <svg
@@ -36,36 +37,39 @@ export const IntroBanner = forwardRef((props, ref) => {
               <div
                 className={classNames("puzzle__child", {
                   puzzleFirstChildAnim: observer.inView,
-                  puzzleFirstChildAnimBackwards: !observer.inView,
                 })}
               ></div>
               <div
                 className={classNames("puzzle__child", {
                   puzzleSecondChildAnim: observer.inView,
-                  puzzleSecondChildAnimBackwards: !observer.inView,
                 })}
               ></div>
               <div
                 className={classNames("puzzle__child", {
                   puzzleThirdChildAnim: observer.inView,
-                  puzzleThirdChildAnimBackwards: !observer.inView,
                 })}
               ></div>
             </div>
           </div>
-          <div className="intro__banner__word">Approaches</div>
+          <div className={classNames("intro__banner__word", { introBannerWordAnim: observer.inView })}>Approaches</div>
         </div>
         <div className="intro__banner__title lower">
-          <div className="intro__banner__word lightItalic">For</div>
-          <div className="intro__banner__word">Changing</div>
-          <div className="intro__banner__word lightItalic">Times</div>
+          <div className={classNames("intro__banner__word lightItalic", { introBannerWordAnim: observer.inView })}>
+            For
+          </div>
+          <div className={classNames("intro__banner__word", { introBannerWordAnim: observer.inView })}>Changing</div>
+          <div className={classNames("intro__banner__word lightItalic", { introBannerWordAnim: observer.inView })}>
+            Times
+          </div>
         </div>
         <div className="intro__banner__row">
           <div
             className="intro__banner__column link"
             onClick={() => SmoothScrollbar.get(appRef.current).scrollTo(0, contactRef.current.offsetTop, 700)}
           >
-            <div className="intro__banner__link__icon__container">
+            <div
+              className={classNames("intro__banner__link__icon__container", { introBannerLinkAnim: observer.inView })}
+            >
               <svg
                 width="37"
                 height="37"
@@ -80,24 +84,30 @@ export const IntroBanner = forwardRef((props, ref) => {
                 />
               </svg>
             </div>
-            <div className="intro__banner__link__title buttonTextUnderline">Contact us</div>
+            <div
+              className={classNames("intro__banner__link__title buttonTextUnderline", {
+                introBannerLinkAnim: observer.inView,
+              })}
+            >
+              Contact us
+            </div>
           </div>
           <div className="intro__banner__column">
             <div className="intro__banner__column__text">
               <div className="intro__banner__column__text__block">
-                <p>
+                <p className={classNames({ introBannerTextBlockAnim: observer.inView })}>
                   At our company, we take pride in our ability to conceive and execute innovative projects in the
                   market.
                 </p>
               </div>
               <div className="intro__banner__column__text__block">
-                <p>
+                <p className={classNames({ introBannerTextBlockAnim: observer.inView })}>
                   We offer comprehensive services that span from project creation to achieving top-tier rankings
                   worldwide.
                 </p>
               </div>
               <div className="intro__banner__column__text__block">
-                <p>
+                <p className={classNames({ introBannerTextBlockAnim: observer.inView })}>
                   We are dedicated to helping our clients bring their visions to life and succeed in their endeavors.
                 </p>
               </div>
@@ -105,15 +115,27 @@ export const IntroBanner = forwardRef((props, ref) => {
           </div>
           <div className="intro__banner__column">
             <div className="intro__banner__column__row">
-              <div className="intro__banner__column__row__item">
+              <div
+                className={classNames("intro__banner__column__row__item", {
+                  introBannerColumnRowItemAnim: observer.inView,
+                })}
+              >
                 <div className="intro__banner__column__row__item__number">30+</div>
                 <div className="intro__banner__column__row__item__text">Partners</div>
               </div>
-              <div className="intro__banner__column__row__item">
+              <div
+                className={classNames("intro__banner__column__row__item", {
+                  introBannerColumnRowItemAnim: observer.inView,
+                })}
+              >
                 <div className="intro__banner__column__row__item__number">70+</div>
                 <div className="intro__banner__column__row__item__text">Projects</div>
               </div>
-              <div className="intro__banner__column__row__item">
+              <div
+                className={classNames("intro__banner__column__row__item", {
+                  introBannerColumnRowItemAnim: observer.inView,
+                })}
+              >
                 <div className="intro__banner__column__row__item__number">15+</div>
                 <div className="intro__banner__column__row__item__text">Specialists</div>
               </div>

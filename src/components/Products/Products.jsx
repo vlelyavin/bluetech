@@ -15,7 +15,7 @@ export const Products = forwardRef((props, ref) => {
   return (
     <section className="products" ref={productsRef}>
       <Container>
-        <div className="products__title__section" ref={observer.ref}>
+        <div className="products__title__section">
           <div className={classNames("products__subheading lightItalic", { subheadingAnimInverted: observer.inView })}>
             What We Create?
           </div>
@@ -30,7 +30,7 @@ export const Products = forwardRef((props, ref) => {
           </div>
         </div>
       </Container>
-      <div className="products__row">
+      <div className="products__row" ref={observer.ref}>
         <Container>
           <div className="products__row__inner">
             <div className={classNames("products__column", { productsColumnAnim: observer.inView })}>

@@ -12,11 +12,10 @@ export const Areas = forwardRef((props, ref) => {
   return (
     <section className="areas" ref={areasRef}>
       <Container>
-        <div className="areas__inner">
+        <div className="areas__inner" ref={observer.ref}>
           <div className="areas__info">
             <div
               className={classNames("areas__info__subtitle lightItalic", { areasInfoTitleLineAnim: observer.inView })}
-              ref={observer.ref}
             >
               What We work with
             </div>

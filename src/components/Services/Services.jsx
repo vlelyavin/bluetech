@@ -14,7 +14,7 @@ export const Services = forwardRef((props, ref) => {
     <section className="services" ref={servicesRef}>
       <Container>
         <div className="services__title__section">
-          <div className={classNames("services__heading", { headingAnimInverted: observer.inView })} ref={observer.ref}>
+          <div className={classNames("services__heading", { headingAnimInverted: observer.inView })}>
             A <span className="mediumItalic">Full Range</span> Of Services To
             <br />{" "}
             <span
@@ -30,7 +30,7 @@ export const Services = forwardRef((props, ref) => {
       </Container>
       <div className="services__row">
         <Container>
-          <div className="services__row__inner">
+          <div className="services__row__inner" ref={observer.ref}>
             <div className="services__row__image__container">
               <img
                 src={servicesBg}

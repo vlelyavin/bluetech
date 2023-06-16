@@ -21,6 +21,7 @@
   font-size: 100px;
   transform: translateX(100px);
   opacity: 0;
+  transition: 0.3s;
 }
 
 .services__row {
@@ -47,7 +48,7 @@
   transform: translateX(-100px);
   opacity: 0;
   transition: 0.3s;
-  transition-delay: 0.3s;
+  transition-delay: 0.1s;
 }
 
 .servicesRowImageAnim {

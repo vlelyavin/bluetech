@@ -20,6 +20,7 @@
   line-height: 110px;
   transform: translateX(-100px);
   opacity: 0;
+  transition: 0.3s;
 }
 
 .intro__subheading {
@@ -44,7 +45,7 @@
   transform: translateX(60px);
   opacity: 0;
   transition: 0.3s;
-  transition-delay: 0.3s;
+  transition-delay: 0.1s;
 }
 
 .introTextAnim {
@@ -82,11 +83,11 @@
 }
 
 .intro__row__item:nth-child(1) {
-  transition-delay: 0.45s;
+  transition-delay: 0.15s;
 }
 
 .intro__row__item:nth-child(2) {
-  transition-delay: 0.6s;
+  transition-delay: 0.2s;
 }
 
 .introRowItemAnim {
@@ -163,7 +164,7 @@
   transform: translateY(50%);
   opacity: 0;
   transition: 0.3s;
-  transition-delay: 0.45s;
+  transition-delay: 0.25s;
 }
 
 .intro__row__button:hover {

@@ -10,7 +10,7 @@ export const Intro = forwardRef((props, ref) => {
   const observer = useInView(observerOptions);
   const { contactRef, introRef, appRef } = ref;
   return (
-    <section className="intro" ref={observer.ref}>
+    <section className="intro">
       <Container>
         <div className="intro__title__section">
           <div className={classNames("intro__heading", { headingAnim: observer.inView })} ref={introRef}>
@@ -30,7 +30,7 @@ export const Intro = forwardRef((props, ref) => {
             compelling way to users around the world. We specialize in the following areas:
           </p>
         </div>
-        <div className="intro__row">
+        <div className="intro__row" ref={observer.ref}>
           <div className={classNames("intro__row__item", { introRowItemAnim: observer.inView })}>
             <div className="intro__row__item__inner">
               <svg
