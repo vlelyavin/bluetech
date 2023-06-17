@@ -8,6 +8,7 @@ import { observerOptions } from "../../constants/constants";
 
 export const IntroBanner = forwardRef((props, ref) => {
   const observer = useInView(observerOptions);
+  const puzzleObserver = useInView({ threshold: 1 });
   const { appRef, contactRef } = ref;
 
   return (
@@ -24,10 +25,10 @@ export const IntroBanner = forwardRef((props, ref) => {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 className={classNames("puzzle__parent", {
-                  puzzleParentAnim: observer.inView,
-                  puzzleParentAnimBackwards: !observer.inView,
+                  puzzleParentAnim: puzzleObserver.inView,
+                  puzzleParentAnimBackwards: !puzzleObserver.inView,
                 })}
-                ref={observer.ref}
+                ref={puzzleObserver.ref}
               >
                 <path
                   d="M231.018 113.851C228.016 115.367 224.993 116.313 222.711 118.156C209.999 128.436 195.884 129.237 181.863 122.678C165.515 115.026 158.052 100.646 158.092 82.9996C158.123 68.4123 166.759 58.5183 178.976 51.6767C187.838 46.7134 188.559 44.7772 183.325 36.218C176.046 24.3146 168.77 12.4179 161.28 0.169512L111.146 30.828C132.384 45.4628 143.563 63.9972 130.608 88.9668C122.821 103.976 105.471 111.486 89.7295 107.629C68.2687 102.365 58.8777 86.6209 56.7449 64.6329L7.03481 95.0317C8.1743 97.1335 9.381 99.6137 10.8067 101.96C18.7627 115.045 26.805 128.077 34.7544 141.166C39.3412 148.726 37.0601 154.551 28.5059 155.799C14.4003 157.852 4.9145 165.521 1.2785 178.985C-2.47941 192.861 3.39079 204.085 13.3817 213.774C26.5438 226.547 48.9625 219.647 57.41 208.118C64.9477 197.83 69.6371 198.253 76.253 209.012C84.815 222.939 93.3678 236.88 101.943 250.799C102.199 251.217 102.711 251.487 104.346 252.894C107.365 251.048 110.808 248.942 114.252 246.836C124.218 240.742 134.184 234.647 144.133 228.527C156.172 221.11 161.109 223.132 164.196 236.797C168.302 254.944 185.24 266.483 202.386 262.38C215.238 259.306 224.265 251.498 227.162 238.331C230.083 225.04 225.645 213.787 215.319 204.996C204.861 196.094 205.119 191.223 216.723 184.109C228.452 176.919 240.112 169.615 251.973 162.653C256.79 159.826 257.83 157.175 254.607 152.172C246.601 139.766 239.093 127.027 231.031 113.843L231.018 113.851ZM118.123 28.9858C118.079 28.9128 118.038 28.8464 117.994 28.7734L147.009 11.03L147.139 11.2423L118.117 28.9898L118.123 28.9858Z"
@@ -37,16 +38,19 @@ export const IntroBanner = forwardRef((props, ref) => {
               <div
                 className={classNames("puzzle__child", {
                   puzzleFirstChildAnim: observer.inView,
+                  puzzleFirstChildAnimBackwards: !observer.inView,
                 })}
               ></div>
               <div
                 className={classNames("puzzle__child", {
                   puzzleSecondChildAnim: observer.inView,
+                  puzzleSecondChildAnimBackwards: !observer.inView,
                 })}
               ></div>
               <div
                 className={classNames("puzzle__child", {
                   puzzleThirdChildAnim: observer.inView,
+                  puzzleThirdChildAnimBackwards: !observer.inView,
                 })}
               ></div>
             </div>

@@ -66,13 +66,14 @@ export const Header = forwardRef((props, ref) => {
   };
 
   useEffect(() => {
+    if (window.innerWidth < 1020) {
+      setTransparentStatus(false);
+    }
     window.addEventListener("resize", handleCloseMenu);
     window.addEventListener("wheel", handleScroll);
-    window.addEventListener("touchstart", handleScroll);
     return () => {
       window.removeEventListener("wheel", handleScroll);
       window.removeEventListener("resize", handleCloseMenu);
-      window.removeEventListener("touchstart", handleScroll);
     };
   }, []);
 
@@ -163,8 +164,8 @@ export const Header = forwardRef((props, ref) => {
             </div>
           </nav>
           <div
-            className={classNames("header__menu", { menuIconTrasform: isMenuVisible })}
             onClick={() => setMenuVisibility(!isMenuVisible)}
+            className={classNames("header__menu", { menuIconTrasform: isMenuVisible })}
           >
             <div className="header__menu__line"></div>
             <div className="header__menu__line"></div>
