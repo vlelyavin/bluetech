@@ -22,7 +22,7 @@ export const Footer = forwardRef((props, ref) => {
                 <br /> Information
               </div>
               <div className="footer__column__line">
-                <div className="footer__column__line__text">Bluelight Limited Ltd.</div>
+                <div className="footer__column__line__text">QuantumTech Ltd</div>
               </div>
               <div className="footer__column__line">
                 <svg
@@ -85,8 +85,8 @@ export const Footer = forwardRef((props, ref) => {
                   />
                 </svg>
 
-                <a href="mailto:office@bluelight-technology.com" className="footer__column__line__text">
-                  office@bluelight-technology.com
+                <a href="mailto:office@quantumtech.dev" className="footer__column__line__text">
+                  office@quantumtech.dev
                 </a>
               </div>
             </div>
@@ -97,7 +97,8 @@ export const Footer = forwardRef((props, ref) => {
         <Container>
           <div className="footer__lower__inner">
             <div className="footer__rights">
-              Bluelight Limited Ltd. ©<br /> all rights reserved
+              QuantumTech Ltd. © all
+              <br /> rights reserved
             </div>
             <nav className="footer__nav">
               <div className="footer__nav__link footerLinkHoverUnderline">Accessibility Statement</div>
